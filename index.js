@@ -8,3 +8,8 @@ const deleteFromObjectByKey = (object, key) => {
   delete res[key]
   return res
 }
+
+function destructivelyDeleteFromObjectByKey(object, key){
+  delete object[artist]
+  return object
+}
