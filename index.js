@@ -1,4 +1,5 @@
-function updateObjectWithKeyAndValue(object, key, value) {
+function updateObjectWithKeyAndValue = (object, key, value) {
+  let res = Object.assign({}, object)
   object[key] = value;
   return object
 }
