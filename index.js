@@ -1,12 +1,11 @@
 function updateObjectWithKeyAndValue(object, key, value) {
-  object[key] = value;
-  return object
+  return Object.assign({}, object, {[key]: value})
 }
 
-const deleteFromObjectByKey = (object, key) => {
-  let res = Object.assign({}, object)
-  delete res[key]
-  return res
+function deleteFromObjectByKey(object, key) {
+  const newObj = Object.assign({}, object)
+  delete newObj[key]
+  return newObj
 }
 
 function destructivelyDeleteFromObjectByKey(object, key){
